@@ -2,12 +2,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo hola! > sayhi.txt
-      - echo oi! >> sayhi.txt
-      - echo halo! >> sayhi.txt
-      - echo ciao! >> sayhi.txt
-      - echo hello! >> sayhi.txt
-      - cat sayhi.txt
-artifacts: 
-  files: 
-    - sayhi.txt
+      - echo source version $CODEBUILD_SOURCE_VERSION
+      - echo webhook trigger $CODEBUILD_WEBHOOK_TRIGGER
